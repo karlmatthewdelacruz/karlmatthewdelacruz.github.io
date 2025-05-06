@@ -2,18 +2,20 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-
+import Header from './components/header/Header'
+import Homepage from './components/pages/homepage/homepage'
 function App() {
   return (
     <div className="App">
-      <p> Hello World! </p>
-      <p> This is my personal portfolio app. </p>
-      <p> I am learning React and Vite. </p>
-      <p> I am excited to build my portfolio. </p>
-      <p> I am using Vite for fast development. </p>
-      <p> I am using React for building UI. </p>
+      <div className="App-container">
+        
+        <Header/>
+        <Homepage/>
+        
+      </div>
     </div>
   )
+  
 }
 
 export default App
