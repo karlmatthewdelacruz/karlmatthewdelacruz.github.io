@@ -3,6 +3,7 @@ import './App.css'
 import Header from './components/header/Header'
 import Homepage from './components/pages/homepage/homepage'
 import SplashPage from './components/splashs/SplashPage'
+import Skillpage from './components/pages/skillpageportion/skillpage'
 
 function App() {
   const [currentSplash, setCurrentSplash] = useState(0);
@@ -23,7 +24,7 @@ function App() {
     if(currentSplash >= 0 && currentSplash < Splash.length) {
       const timer = setTimeout(() => {
         setCurrentSplash(prev => prev + 1);
-      }, 200); 
+      }, 250); 
       return () => clearTimeout(timer);
     }
   }, [currentSplash, Splash.length]);
@@ -36,7 +37,11 @@ function App() {
       <div className={`App-container ${!finishedSplash ? 'hidden' : 'fade-in-main'}`}>
         <Header />
         <Homepage />
+        <div className ="info-divider"/>
+        <Skillpage />
       </div>
+      
+      
     </>
   );
 }

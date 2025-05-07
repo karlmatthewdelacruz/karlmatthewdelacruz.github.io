@@ -1,0 +1,98 @@
+
+.skillpage-box {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:auto auto auto;
+    gap: 5px;
+    transition: opacity 1s ease-in-out;
+    height: 60vh;
+    width: 80vw;
+    margin:auto;
+    grid-template-areas:
+        "sb1 sb2"
+        "sb3 sb2"
+        ". sb4";
+    place-items: center;
+    opacity: 0; /* Start invisible */
+    transition: opacity 0.8s ease-in-out, transform 0.2s ease-out;
+  
+  }
+
+.skillpage-wrap{
+    width:100%;
+    height: 85vh;
+}
+
+.skillbox{
+    width: 200;
+    height: 200px;
+    
+    transition: opacity 1s ease-in-out;
+    border-radius: 5%;
+}
+
+.sb1{
+   
+    grid-area: sb1;   
+    border: solid 0.5px #333333;
+    border-radius: 5%;
+    box-shadow: 0px 10px 15px 0 rgba(154, 153, 153,0.25);
+    width:100%;
+    
+    height:30vh;
+}
+.sb2{
+    margin-top:0%;
+    margin-left:7%;
+    top :10%;
+    grid-area: sb2;  
+    border: solid 0.5px #333333;
+    border-radius: 5%;
+    box-shadow: 0px 10px 15px 0 rgba(154, 153, 153,0.25);
+    width:100%;
+    height:30vh;
+
+}
+.sb3{
+    margin-top:-10%;
+    grid-area:sb3;
+    border: solid 0.5px #333333;
+    border-radius: 5%;
+    box-shadow: 0px 10px 15px 0 rgba(154, 153, 153,0.25);
+    width:100%;
+
+}
+
+.sb4{
+    margin-left:7%;
+    margin-top:-20%;
+    grid-area:sb4;    
+    border: solid 0.5px #333333;
+    border-radius: 5%;
+    box-shadow: 0px 10px 15px 0 rgba(154, 153, 153,0.25);
+    width:100%;
+
+}
+
+h2{
+    text-align: center;
+}
+
+#skhl{
+   color: #B266FF;
+   
+}
+
+#frhl{
+   color: #FF7F7F
+   
+}
+ul{
+    text-align:center;
+}
+
+.skillpage-box.drop-box {
+    opacity: 2;
+    
+  }

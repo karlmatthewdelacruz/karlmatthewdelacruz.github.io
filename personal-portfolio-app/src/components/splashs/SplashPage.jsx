@@ -2,7 +2,10 @@ import "./splashpage.css"
 function SplashPage({word}) {
   return (
     <div className="splash-page">
-        <h1 className="fade-in">{word.name}</h1>
+      <div className="paper-container fade-in">
+        <h1>{word.name}</h1>
+        <div className="border"/>
+      </div>
     </div>
   );
 }

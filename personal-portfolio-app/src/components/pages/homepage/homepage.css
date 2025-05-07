@@ -1,3 +1,4 @@
+
 .body-wrapper{
     z-index: 2;
 }
@@ -18,7 +19,8 @@ h3,h1 {
     font-weight:bold;
   }
   #name-hl{
-    color:	#00BFFF;
+    
+    color:	#B266FF;
   }
   #full-stack-hl{
     color:	#66FF66;
@@ -27,7 +29,7 @@ h3,h1 {
     color:#FF3C3C;
   }
   #creating-hl{
-    color:#B266FF;
+    color:#00BFFF;
   }
   .boxes-container {
     position: absolute;
