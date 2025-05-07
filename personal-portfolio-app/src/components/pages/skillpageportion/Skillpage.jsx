@@ -39,7 +39,7 @@ function Skillpage(){
                 </ul>
             </div>
             <div className = "sb2">
-                <h2> Backend</h2>
+                <h2 id = "behl"> Backend</h2>
                 <ul className = "skillpage-list">
                 <li>Node.js</li>
                 <li>MongoDB</li>
