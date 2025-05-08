@@ -2,9 +2,11 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import Header from './components/header/Header'
 import Homepage from './components/pages/homepage/homepage'
-import SplashPage from './components/splashs/SplashPage'
+import SplashPage from './components/designs/SplashPage'
 import Skillpage from './components/pages/skillpageportion/Skillpage'
 import Projects from './components/pages/projectpage/Projects'
+import Ripple from './components/designs/Ripple'
+
 function App() {
   const [currentSplash, setCurrentSplash] = useState(0);
   const Splash = [
@@ -22,12 +24,16 @@ function App() {
 
   useEffect(() => {
     if(currentSplash >= 0 && currentSplash < Splash.length) {
+      document.body.classList.add('no-scroll');
       const timer = setTimeout(() => {
         setCurrentSplash(prev => prev + 1);
       }, 250); 
       return () => clearTimeout(timer);
+    }else{
+      document.body.classList.remove('no-scroll');
     }
   }, [currentSplash, Splash.length]);
+
   
   const finishedSplash = currentSplash >= Splash.length;
   
@@ -35,6 +41,7 @@ function App() {
     <>
       {!finishedSplash && <SplashPage word={Splash[currentSplash]} />} 
       <div className={`App-container ${!finishedSplash ? 'hidden' : 'fade-in-main'}`}>
+        <Ripple/>
         <Header />
         <Homepage />
       </div>
