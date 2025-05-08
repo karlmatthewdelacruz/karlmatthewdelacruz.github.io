@@ -25,9 +25,9 @@ function Skillpage(){
     }, []);
 
     return(
-      <div className ="skillpage-wrap">
+      <div className ="skillpage-wrap" ref = {domRef}>
         <h1 id ="skhl"> Current technologies</h1>
-        <div className = {`skillpage-box ${isVisible ? 'drop-box':''}`} ref = {domRef}>
+        <div className = {`skillpage-box ${isVisible ? 'drop-box':''}`} >
             <div className = "sb1">
                 <h2 id = "frhl"> Frontend</h2>
                 <ul className = "skillpage-list">
