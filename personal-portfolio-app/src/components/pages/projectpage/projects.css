@@ -1,0 +1,31 @@
+.projects-wrap{
+    width: 100%;
+    height:100vh;
+    display:block;
+    justify-content: center;
+    align-items: center;
+}
+.header{
+    text-align:center;
+    justify-self:start;
+}
+
+.projects-box-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:20px;
+    width:50rem;
+    height:90%;
+    margin:auto;
+}
+.p-box{
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
+    box-shadow: 0px 10px 15px 0 rgba(154, 153, 153,0.25);
+    border: solid 0.5px #333333;
+    transition: all 0.3s ease-in-out;
+    background-color: #1A1A1A;
+    margin:auto;
+   
+}

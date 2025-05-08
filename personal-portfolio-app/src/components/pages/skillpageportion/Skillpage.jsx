@@ -1,7 +1,6 @@
 import './skillpage.css';
 import React,{useRef, useState, useEffect } from 'react';
-
-
+import { frontEndSkills, backEndSkills } from '../../../assets/information/skills.json';
 
 function Skillpage(){
     const [isVisible, setIsVisible] = useState(false);
@@ -27,23 +26,22 @@ function Skillpage(){
 
     return(
       <div className ="skillpage-wrap">
-        <h1 id ="skhl"> Skills</h1>
+        <h1 id ="skhl"> Current technologies</h1>
         <div className = {`skillpage-box ${isVisible ? 'drop-box':''}`} ref = {domRef}>
             <div className = "sb1">
                 <h2 id = "frhl"> Frontend</h2>
                 <ul className = "skillpage-list">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>React</li>
+                {frontEndSkills.map((skill, index) => (
+                    <li key={index}>{skill}</li>
+                ))}
                 </ul>
             </div>
             <div className = "sb2">
                 <h2 id = "behl"> Backend</h2>
                 <ul className = "skillpage-list">
-                <li>Node.js</li>
-                <li>MongoDB</li>
-                <li>MySQL</li>
+                {backEndSkills.map((skill, index) => (
+                    <li key={index}>{skill}</li>
+                ))}
                 </ul>
             </div>
            
@@ -51,5 +49,4 @@ function Skillpage(){
       </div>  
     );
 }
-
-export default Skillpage;
+export default Skillpage

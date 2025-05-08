@@ -3,8 +3,8 @@ import './App.css'
 import Header from './components/header/Header'
 import Homepage from './components/pages/homepage/homepage'
 import SplashPage from './components/splashs/SplashPage'
-import Skillpage from './components/pages/skillpageportion/skillpage'
-
+import Skillpage from './components/pages/skillpageportion/Skillpage'
+import Projects from './components/pages/projectpage/Projects'
 function App() {
   const [currentSplash, setCurrentSplash] = useState(0);
   const Splash = [
@@ -37,10 +37,11 @@ function App() {
       <div className={`App-container ${!finishedSplash ? 'hidden' : 'fade-in-main'}`}>
         <Header />
         <Homepage />
-        <div className ="info-divider"/>
-        <Skillpage />
       </div>
-      
+      <div className ="info-divider"/>
+      <Skillpage />
+      <div className ="info-divider"/>
+      <Projects />
       
     </>
   );
