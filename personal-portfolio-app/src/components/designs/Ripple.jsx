@@ -1,6 +1,6 @@
 import './ripple.css'
 import { useState, useEffect } from 'react'
-
+{/* This Will basically try to simualate a ripple effect in the background */}
 function Ripple() {
   const [rippleCount, setRippleCount] = useState([]);
   const [rippleStopper,setRippleStop] = useState(0);
@@ -15,7 +15,7 @@ function Ripple() {
           { id: Date.now() }, 
         ]);
         setRippleStop((prev) => prev + 1); 
-      }, 500);
+      }, 500);{/* adjust this for desired amount in miliseconds ng ripple*/}
 
       
       return () => clearInterval(interval);

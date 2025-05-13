@@ -1,4 +1,9 @@
 import "./splashpage.css"
+{/* 
+  Responsible for the intro splashpage 
+  word is an object with contents:
+  String
+  */}
 function SplashPage({word}) {
   return (
     <div className="splash-page">
